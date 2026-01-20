@@ -7,7 +7,7 @@ module.exports = {
       cwd: '/var/www/chomusuke-demo-next',
       instances: 'max',
       exec_mode: 'cluster',
-      env: {
+      env_production: {
         NODE_ENV: 'production',
         PORT: 3001,
         POSTGRES_URL: process.env.POSTGRES_URL,
@@ -16,7 +16,6 @@ module.exports = {
         BASE_URL: process.env.BASE_URL,
         AUTH_SECRET: process.env.AUTH_SECRET,
       },
-      envFiles: '.env'
     },
   ],
 };
