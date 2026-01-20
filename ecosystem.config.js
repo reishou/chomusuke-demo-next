@@ -10,6 +10,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         PORT: 3001,
+        ABC: process.env.POSTGRES_URL,
       },
       env_file: '.env.production',
     },
