@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'chomusuke-demo-next',
       script: 'pnpm',
-      args: 'start',
+      args: 'start -p 3001',
       cwd: '/var/www/chomusuke-demo-next',
       instances: 'max',
       exec_mode: 'cluster',
