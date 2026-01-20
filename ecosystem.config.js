@@ -3,19 +3,15 @@ module.exports = {
     {
       name: 'chomusuke-demo-next',
       script: 'pnpm',
-      args: 'dev',
+      args: 'start',
       cwd: '/var/www/chomusuke-demo-next',
       instances: 'max',
       exec_mode: 'cluster',
-      env_production: {
+      env: {
         NODE_ENV: 'production',
         PORT: 3001,
-        POSTGRES_URL: process.env.POSTGRES_URL,
-        STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
-        STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
-        BASE_URL: process.env.BASE_URL,
-        AUTH_SECRET: process.env.AUTH_SECRET,
       },
+      env_file: '.env',
     },
   ],
 };
