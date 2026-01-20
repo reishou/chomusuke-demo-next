@@ -9,8 +9,9 @@ module.exports = {
       exec_mode: 'cluster',
       env: {
         NODE_ENV: 'production',
-        PORT: 3001,
+        PORT: 3002,
         ABC: process.env.POSTGRES_URL,
+        DEF: "90000"
       },
       env_file: '.env.production',
     },
