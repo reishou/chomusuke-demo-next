@@ -10,7 +10,9 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         PORT: 3002,
-        ABC: process.env.POSTGRES_URL,
+        ABC: Object.entries(process.env)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('\n'),
         DEF: "90000"
       },
       env_file: '.env.production',
