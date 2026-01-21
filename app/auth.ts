@@ -11,7 +11,6 @@ export const {
   signOut,
 } = NextAuth({
   ...authConfig,
-  trustHost: true,
   providers: [
     Credentials({
       async authorize({ email, password }: any) {
@@ -22,4 +21,5 @@ export const {
       },
     }),
   ],
+  trustHost: true,
 });
